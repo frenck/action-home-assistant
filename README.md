@@ -189,7 +189,7 @@ as long as it is version 1.
 
 ```yaml
 - name: 🚀 Run Home Assistant Configuration Check
-  uses: frenck/action-home-assistant@v1.1
+  uses: frenck/action-home-assistant@v1
 ```
 
 ### Automatically update using Dependabot

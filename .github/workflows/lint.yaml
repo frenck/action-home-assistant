@@ -2,11 +2,11 @@
 name: Lint
 
 # yamllint disable-line rule:truthy
-on: [push, pull_request]
+on: [push, pull_request, workflow_dispatch]
 
 jobs:
-  build:
-    name: 🧹 yamllint
+  yamllint:
+    name: yamllint
     runs-on: ubuntu-latest
     steps:
       - name: ⤵️ Check out code from GitHub
@@ -15,7 +15,7 @@ jobs:
         uses: frenck/action-yamllint@v1.0.1
 
   prettier:
-    name: 🧹 Prettier
+    name: Prettier
     runs-on: ubuntu-latest
     steps:
       - name: ⤵️ Check out code from GitHub

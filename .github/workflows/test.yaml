@@ -1,5 +1,9 @@
+---
 name: Test
+
+# yamllint disable-line rule:truthy
 on: [push, pull_request]
+
 jobs:
   build:
     name: Home Assistant Core Configuration Check

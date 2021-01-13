@@ -62,7 +62,8 @@ runs:
           secrets="${{ steps.check.outputs.path }}/${secrets}"
         elif [[ ! -f "${secrets}" ]];
         then
-          echo "::error ::Could not find specified secrets file: ${{ inputs.secrets }}"
+          echo "::error ::Could not find specified secrets file:"\
+            " ${{ inputs.secrets }}"
           exit 1
         fi
 

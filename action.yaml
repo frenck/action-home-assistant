@@ -29,12 +29,12 @@ runs:
       run: |
         path="${{ inputs.path }}"
         path="${path%/}"
-        if [[ -d "${path}" ]]; then
+        if [[ ! -d "${path}" ]]; then
           echo "::error ::Could not find specified configuration path: ${path}"
           exit 1
         fi
 
-        if [[ -f "${path}/configuration.yaml" ]]; then
+        if [[ ! -f "${path}/configuration.yaml" ]]; then
           echo "::error ::Could not find configuration.yaml file in: ${path}"
           exit 1
         fi

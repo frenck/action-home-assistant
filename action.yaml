@@ -1,7 +1,6 @@
 ---
 name: "Frenck's Home Assistant Core Configuration Check"
-description:
-  🚀 Frenck's GitHub Action for running a Home Assistant config check.
+description: 🚀 Frenck's GitHub Action for running a Home Assistant config check.
 author: frenck
 
 branding:

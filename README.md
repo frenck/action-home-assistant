@@ -52,7 +52,7 @@ By default, this GitHub Action will use the root folder as the Home Assistant
 Core configuration folder. If you store your Home Assistant configuration in a
 subfolder, the `path` argument can be used to inform the Action about that.
 
-For example, if you configuration is in the `config` folder:
+For example, if your configuration is in the `config` folder:
 
 ```yaml
 - name: 🚀 Run Home Assistant Core Configuration Check
@@ -71,7 +71,7 @@ This GitHub Action offers a way around that, but using a fake secrets file.
 To use this, add a fake secrets file to your repository (e.g.,
 `fakesecrets.yaml`) and make sure the content is the same as your real
 `secrets.yaml` (with, of course, fake credentials/data). The GitHub Action
-will use this file during checking your configuration.
+will use this file while checking your configuration.
 
 For example, if you fake secrets file is `fakesecrets.yaml`:
 
@@ -91,7 +91,7 @@ folder.
 
 If the `.HA_VERSION` file is found, the version in that file is used. If
 the `.HA_VERSION` file is not found; the Action will use the latest stable
-version of Home Assistant to test your configuration with.
+version of Home Assistant to test your configuration.
 
 However, you can specify/override any version you like to check against,
 for example, check with Home Assistant Core `2021.1.0`:
@@ -104,7 +104,7 @@ for example, check with Home Assistant Core `2021.1.0`:
 ```
 
 Alternatively, you can also use `stable`, `beta` or `dev` to run against
-latest versions of those stability channels.
+the latest versions of those stability channels.
 
 ```yaml
 - name: 🚀 Run Home Assistant Core Configuration Check
@@ -189,21 +189,21 @@ as long as it is version 1.
 
 ```yaml
 - name: 🚀 Run Home Assistant Configuration Check
-  uses: frenck/action-home-assistant@v1.1
+  uses: frenck/action-home-assistant@v1
 ```
 
 ### Automatically update using Dependabot
 
-The advantage of locking against a more specific version, is that it prevent
+The advantage of locking against a more specific version, is that it prevents
 surprises if an issue or breaking changes were introduced in a newer release.
 
 The disadvantage of being more specific, is that it requires you to keep things
 up to date. Fortunately, GitHub has a tool for that, called: Dependabot.
 
 Dependabot can automatically open a pull request on your repository to update
-this action for you. You can instantly see if the new version works (as the
+this Action for you. You can instantly see if the new version works (as the
 pull request shows the success or failure status) and you can decide to
-merge it in but hitting the merge button. Quick, easy and always up2date.
+merge it in by hitting the merge button. Quick, easy and always up2date.
 
 To enable Dependabot, create a file called `.github/dependabot.yaml`:
 

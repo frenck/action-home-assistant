@@ -14,17 +14,6 @@ jobs:
       - name: 🚀 Run yamllint
         uses: frenck/action-yamllint@v1.0.1
 
-  json:
-    name: 🧹 JSON Lint
-    runs-on: ubuntu-latest
-    steps:
-      - name: ⤵️ Check out code from GitHub
-        uses: actions/checkout@v2.3.4
-      - name: 🚀 Run JQ
-        run: |
-          shopt -s globstar
-          cat **/*.json | jq '.'
-
   prettier:
     name: 🧹 Prettier
     runs-on: ubuntu-latest

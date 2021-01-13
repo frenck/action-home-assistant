@@ -1,0 +1,18 @@
+---
+# Configure a default setup of Home Assistant (frontend, api, etc)
+default_config:
+
+# Automations to test an include
+automation: !include automations.yaml
+
+# Text to speech
+tts:
+  - platform: google_translate
+
+# Demo integration
+demo:
+
+# A sensor, useless, but ensures the fake secrets are loaded
+sensor:
+  - platform: otp
+    token: !secret frenck

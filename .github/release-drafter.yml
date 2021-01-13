@@ -21,7 +21,7 @@ categories:
       - "performance"
   - title: "🧰 Maintenance"
     labels:
-      - "chore"
+      - "maintenance"
       - "ci"
   - title: "📚 Documentation"
     labels:

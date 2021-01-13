@@ -25,9 +25,6 @@
 - name: "maintenance"
   color: 2af79e
   description: "Generic maintenance tasks."
-- name: "chore"
-  color: 2af79e
-  description: "Generic chore."
 - name: "ci"
   color: 1d76db
   description: "Work that improves the continue integration."

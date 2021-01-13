@@ -92,11 +92,12 @@ runs:
       shell: bash
       run: |
         docker run --rm \
+          --entrypoint "" \
           "homeassistant/home-assistant:${{ steps.version.outputs.version }}" \
             python -m homeassistant --version
 
         docker run --rm \
-          --entrypoint /bin/bash \
+          --entrypoint "" \
           -v $(pwd):/github/workspace \
           --workdir /github/workspace \
           "homeassistant/home-assistant:${{ steps.version.outputs.version }}" \

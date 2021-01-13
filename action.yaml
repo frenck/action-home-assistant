@@ -95,7 +95,7 @@ runs:
           "homeassistant/home-assistant:${{ steps.version.outputs.version }}" \
             python -m homeassistant --version
 
-        docker run --rm -it \
+        docker run --rm \
           --entrypoint /bin/bash \
           -v $(pwd):/github/workspace \
           --workdir /github/workspace \

@@ -1,0 +1,22 @@
+---
+name: Release Tracker
+
+# yamllint disable-line rule:truthy
+on:
+  push:
+    tags:
+      - v[0-9]+.[0-9]+.[0-9]+
+  workflow_dispatch:
+
+jobs:
+  release-tracker:
+    name: 🏷 Release Tracker
+    runs-on: ubuntu-latest
+    steps:
+      - name: ⤵️ Check out code from GitHub
+        uses: actions/checkout@v2
+        with:
+          fetch-depth: 0
+          ref: main
+      - name: 🚀 Run Release Tracker
+        uses: bewuethr/release-tracker-action@v1.2.0

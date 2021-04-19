@@ -86,7 +86,7 @@ runs:
         fi
         echo "::set-output name=version::${version}"
 
-        docker pull "homeassistant/home-assistant:${version}"
+        docker pull -q "homeassistant/home-assistant:${version}"
 
     - name: 🚀 Run Home Assistant Configuration Check
       shell: bash

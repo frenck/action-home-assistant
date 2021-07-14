@@ -91,7 +91,8 @@ runs:
     - name: 🏗 Register Home Assistant problem matcher
       shell: bash
       run: |
-        echo "::add-matcher::matcher.json"
+        matcher="${{ github.action_path }}/matcher.json"
+        echo "::add-matcher::${matcher}"
 
     - name: 🚀 Run Home Assistant Configuration Check
       shell: bash

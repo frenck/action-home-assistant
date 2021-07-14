@@ -88,6 +88,11 @@ runs:
 
         docker pull -q "homeassistant/home-assistant:${version}"
 
+    - name: 🏗 Register Home Assistant problem matcher
+      shell: bash
+      run: |
+        echo "::add-matcher::matcher.json"
+
     - name: 🚀 Run Home Assistant Configuration Check
       shell: bash
       run: |

@@ -96,7 +96,7 @@ runs:
 
     - name: 🚀 Run Home Assistant Configuration Check
       shell: bash
-      # yamllint disable-line rule:line-length
+      # yamllint disable rule:line-length
       run: |
         docker run --rm \
           --entrypoint "" \

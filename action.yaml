@@ -86,7 +86,7 @@ runs:
         fi
         echo "::set-output name=version::${version}"
 
-        docker pull -q "homeassistant/home-assistant:${version}"
+        docker pull -q "ghcr.io/home-assistant/home-assistant:${version}"
 
     - name: 🏗 Register Home Assistant problem matcher
       shell: bash
@@ -96,17 +96,18 @@ runs:
 
     - name: 🚀 Run Home Assistant Configuration Check
       shell: bash
+      # yamllint disable rule:line-length
       run: |
         docker run --rm \
           --entrypoint "" \
-          "homeassistant/home-assistant:${{ steps.version.outputs.version }}" \
+          "ghcr.io/home-assistant/home-assistant:${{ steps.version.outputs.version }}" \
             python -m homeassistant --version
 
         docker run --rm \
           --entrypoint "" \
           -v $(pwd):/github/workspace \
           --workdir /github/workspace \
-          "homeassistant/home-assistant:${{ steps.version.outputs.version }}" \
+          "ghcr.io/home-assistant/home-assistant:${{ steps.version.outputs.version }}" \
             python -m homeassistant \
               --config "${{ steps.check.outputs.path }}" \
               --script check_config

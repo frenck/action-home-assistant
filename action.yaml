@@ -104,10 +104,9 @@ runs:
           --entrypoint "" \
           "homeassistant/home-assistant:${{ steps.version.outputs.version }}" \
             python -m homeassistant --version
+        env_file_arg=""
         if [[ -f "${{ inputs.env_file }}" ]]; then
           env_file_arg="--env-file ${{ inputs.env_file }}"
-        else
-          env_file_arg=""
         fi
         docker run --rm \
           --entrypoint "" \

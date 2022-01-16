@@ -43,7 +43,7 @@ jobs:
 |   Input    |                             Description                              |   Usage    |
 | :--------: | :------------------------------------------------------------------: | :--------: |
 | `env_file` |              Possible path to environment file to use.               | _Optional_ |
-|  `path`    | Path to the folder containing the Home Assistant Core configuration. | _Optional_ |
+|   `path`   | Path to the folder containing the Home Assistant Core configuration. | _Optional_ |
 | `secrets`  |      Alternative secrets file to use, e.g., "fakesecrets.yaml".      | _Optional_ |
 | `version`  |    Version to use; dev/beta/stable or a specific version number.     | _Optional_ |
 

@@ -18,6 +18,9 @@ inputs:
   version:
     description: Version to use; dev/beta/stable or a specific version number
     required: false
+  env_file:
+    description: Possible path to environment file to use
+    required: false
 
 runs:
   using: "composite"
@@ -102,10 +105,14 @@ runs:
           --entrypoint "" \
           "ghcr.io/home-assistant/home-assistant:${{ steps.version.outputs.version }}" \
             python -m homeassistant --version
-
+        env_file_arg=""
+        if [[ -f "${{ inputs.env_file }}" ]]; then
+          env_file_arg="--env-file ${{ inputs.env_file }}"
+        fi
         docker run --rm \
           --entrypoint "" \
           -v $(pwd):/github/workspace \
+          $env_file_arg \
           --workdir /github/workspace \
           "ghcr.io/home-assistant/home-assistant:${{ steps.version.outputs.version }}" \
             python -m homeassistant \

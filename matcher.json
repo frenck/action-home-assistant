@@ -20,6 +20,16 @@
           "message": 1
         }
       ]
+    },
+    {
+      "owner": "homeassistant-platform-error-integration-not-found",
+      "pattern": [
+        {
+          "regexp": "Platform (error) .* - (Integration '.*' not found).$",
+          "severity": 1,
+          "message": 2
+        }
+      ]
     }
   ]
 }

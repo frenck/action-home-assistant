@@ -150,6 +150,7 @@ you with some real-world uses of this GitHub Action.
 - [Metbril's :sunglasses: Home Assistant Configuration](https://github.com/metbril/home-assistant-config)
 - [ntilley905's Home Assistant Configuration](https://github.com/ntilley905/hass)
 - [robbrad's Home Assistant Configuration](https://github.com/robbrad/HA-Config)
+- [Pinkywafer's Home Assistant Configuration](https://github.com/pinkywafer/Home-Assistant_Config)
 
 Are you using this GitHub Action? Feel free to open up a PR to add your
 configuration to this list 😍

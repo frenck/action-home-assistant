@@ -41,7 +41,7 @@ runs:
           exit 1
         fi
 
-        echo "::set-output name=path::${path}"
+        echo "path=${path}" >> "$GITHUB_OUTPUT"
 
     - name: 🏗 Ensure secrets are in place
       shell: bash
@@ -87,7 +87,7 @@ runs:
             version="stable"
           fi
         fi
-        echo "::set-output name=version::${version}"
+        echo "version=${version}" >> "$GITHUB_OUTPUT"
 
         docker pull -q "ghcr.io/home-assistant/home-assistant:${version}"
 

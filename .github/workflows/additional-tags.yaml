@@ -19,4 +19,4 @@ jobs:
       - name: ⤵️ Check out code from GitHub
         uses: actions/checkout@v3
       - name: 🚀 Run Release Tracker
-        uses: vweevers/additional-tags-action@v1.0.0
+        uses: vweevers/additional-tags-action@v2.0.0

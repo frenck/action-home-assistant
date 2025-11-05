@@ -111,9 +111,9 @@ runs:
         fi
         docker run --rm \
           --entrypoint "" \
-          -v $(pwd):/github/workspace \
+          -v $(pwd):/root/.homeassistant \
           $env_file_arg \
-          --workdir /github/workspace \
+          --workdir /root/.homeassistant \
           "ghcr.io/home-assistant/home-assistant:${{ steps.version.outputs.version }}" \
             python -m homeassistant \
               --config "${{ steps.check.outputs.path }}" \
